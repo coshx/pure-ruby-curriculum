@@ -11,7 +11,7 @@ class ToyDog
   end
   
   def self.speak
-    DogSkills::THINGS_DOGS_SAY.sample
+    puts DogSkills::THINGS_DOGS_SAY.sample
   end
 
 end

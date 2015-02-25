@@ -17,16 +17,16 @@ class Dog < Animal
   
   # Can you make a dog named Buck who is 3 years old?
   # You are effectively creating an 'instance' of the Dog Class.
-  def initialize(name,age)
+  def initialize(name, age)
     @name = name
     @age = age
   end
 
   # Try typing Dog.description.
-  # What do you think super() does?
+  # What do you think super does?
   def self.description
-    super()
-    puts "A usually furry, carnivorous member of the canidae family."
+    super
+    "A usually furry, carnivorous member of the canidae family."
   end
 
   # Try typing "Dog.owner_says"
@@ -34,14 +34,13 @@ class Dog < Animal
   # Try calling owner_says on your instance of Dog (Buck)
   # Why do you get a different result?
   def owner_says
-    puts "My dog's name is #{@name} and he is #{@age}."
+    "My dog's name is #{@name} and he is #{@age}."
   end
   
   # How is the speak method different from the owner_says method?
   def self.speak
     # This is how you access variables in Modules
-    DogSkills::THINGS_DOGS_SAY.sample
+    puts DogSkills::THINGS_DOGS_SAY.sample
   end
 
 end
-
