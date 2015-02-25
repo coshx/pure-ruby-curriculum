@@ -20,7 +20,7 @@ Gabe Kopley, Instructor
 
 - Goal: Run through the minimum subset of the Ruby language that relates to Object-Oriented program design.
 - Topics: class vs. module, include vs. extend, what is self, inheritance vs. composition
-- Exercise: We will model a kingdom of creatures with interesting behaviors.
+- Exercise: We will model Animals and Dogs, even ToyDogs.
 - Time: 3 hours
 
 ####Lesson 1: TDD/BDD with RSpec
