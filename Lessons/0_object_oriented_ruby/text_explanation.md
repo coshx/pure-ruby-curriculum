@@ -6,7 +6,8 @@
 - Time: 3 hours
 
 ### Instructions:
-- Download the files in 0-Object-Oriented-Ruby
+- Download the files in 0_object_oriented_ruby
+- Open that folder in your terminal
 - Type "irb" in terminal
 - When in console, type load 'load.rb'
 
