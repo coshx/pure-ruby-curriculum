@@ -1,9 +1,9 @@
 module DogSkills
-  
+
   THINGS_DOGS_SAY = ["Woof", "Squeakkk", "Yawwwn", "Pant"]
-  
+
   def jumps
-    "Dog jumps up and down." 
+    "Dog jumps up and down."
   end
 
   # When is @name populated? and when is it not?
