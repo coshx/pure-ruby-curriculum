@@ -10,7 +10,7 @@ class ToyDog
     @name = name
   end
 
-  def self.speak
+  def speak
     puts DogSkills::THINGS_DOGS_SAY.sample
   end
 

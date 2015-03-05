@@ -1,11 +1,10 @@
 class Animal
 
-  def self.description
-    puts "A multicellular, eukaryotic organism of the kingdom Animalia."
+  def description
+    "A multicellular, eukaryotic organism of the kingdom Animalia."
   end
 
-  def self.is_multicellular?
+  def is_multicellular?
     true
   end
-
 end

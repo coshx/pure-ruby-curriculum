@@ -22,14 +22,13 @@ class Dog < Animal
     @age = age
   end
 
-  # Try typing Dog.description.
+  # Try typing Dog.new.description.
   # What do you think super does?
-  def self.description
-    super
-    "A usually furry, carnivorous member of the canidae family."
+  def description
+    super + "\nA usually furry, carnivorous member of the canidae family."
   end
 
-  # Try typing "Dog.owner_says"
+  # Try typing "Dog.new.owner_says"
   # Why doesn't it work?
   # Try calling owner_says on your instance of Dog (Buck)
   # Why do you get a different result?
@@ -38,7 +37,7 @@ class Dog < Animal
   end
 
   # How is the speak method different from the owner_says method?
-  def self.speak
+  def speak
     # This is how you access variables in Modules
     puts DogSkills::THINGS_DOGS_SAY.sample
   end
