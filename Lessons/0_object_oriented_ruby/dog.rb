@@ -1,6 +1,6 @@
 # Below you'll see an example of inheritance.
 # Class Dog inherits from Class Animal.
-# Try loading files and typing Dog.is_multicellular?
+# Try loading files and typing Dog.new.is_multicellular?
 # What do you now know about inheritance?
 class Dog < Animal
 
@@ -9,8 +9,8 @@ class Dog < Animal
   # Why do you get a result even though we haven't defined is_multicellular in the Dog class?
 
   # Below you'll see an example of composition.
-  # Class Dog uses all methods available in a Module called "DogSkills"
-  include DogSkills
+  # Class Dog uses all methods available in a Module called "Quadruped"
+  include Quadruped
 
   # What might attr_accessor do?
   attr_accessor :name, :age
@@ -39,7 +39,7 @@ class Dog < Animal
   # How is the speak method different from the owner_says method?
   def speak
     # This is how you access variables in Modules
-    puts DogSkills::THINGS_DOGS_SAY.sample
+    puts ["Woof", "Squeakkk", "Yawwwn", "Pant"].sample
   end
 
 end
