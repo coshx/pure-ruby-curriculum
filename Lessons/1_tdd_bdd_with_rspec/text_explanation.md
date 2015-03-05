@@ -1,7 +1,7 @@
 ####Lesson 1: TDD/BDD with RSpec
 
 - Goal: Get up and running with the RSpec behavior-driven testing framework.
-- Topics: Ruby gems, reflection, "Test-first development", the pry interactive debugger, accessing the filesystem, Ruby's blocks, deciding what to test, fundamental Ruby data structures
+- Topics: Ruby gems, "Test-first development", the pry interactive debugger, accessing the filesystem, Ruby's blocks, deciding what to test, fundamental Ruby data structures
 - Exercise: While writing tests first, we will create a program that generates a histogram of the number of instances of each character in an input file.
 - Time: 3 hours
 
