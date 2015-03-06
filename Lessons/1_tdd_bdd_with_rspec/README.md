@@ -14,7 +14,10 @@
 - Create histogram_spec.rb and begin to write tests to create a histogram of characters based on a string input (see 1st link below)
 - Write histogram.rb and create Histogram class
 - Run test, does it fail?
-- Make test pass, using pry while you write method
+- Make test pass, using pry to help you write a method to create the histogram of characters
+- Write another test in histogram_spec.rb to create a histogram of characters based on a file input (we've made one for you called 'text.txt')
+- Run test, does it fail?
+- Make test pass, using pry to help you again! (Hint: Can you somehow use the method you wrote to make histograms for strings?)
 
 #### Great Resources we referenced
 - [How to use RSpec to test?](https://github.com/rspec/rspec-core)
