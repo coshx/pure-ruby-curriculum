@@ -1,11 +1,15 @@
 class Animal
+  include Population
 
-  def self.description
-    puts "A multicellular, eukaryotic organism of the kingdom Animalia."
+  def initialize(age)
+    @age = age
   end
 
-  def self.is_multicellular? 
+  def description
+    "A multicellular, eukaryotic organism of the kingdom Animalia."
+  end
+
+  def is_multicellular?
     true
   end
-  
 end
