@@ -11,7 +11,7 @@ class Histogram
 
   def self.parse_file(file)
     output = {}
-    File.open(file,"r") do |f|
+    File.open(file, "r") do |f|
       f.each_line do |line|
         line_histogram = parse_string(line.downcase)
         output.merge!(line_histogram) do |key, old_val, new_val|
