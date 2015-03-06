@@ -1,15 +1,15 @@
 ### Lesson 0: Basic Object-Oriented Ruby
 
 - Goal: Run through the minimum subset of the Ruby language that relates to Object-Oriented program design.
-- Topics: class vs. module, what is self, include vs. extend, inheritance vs. composition
-- Exercise: We will model Animals and Dogs, even ToyDogs.
+- Topics: class vs. module, what is self, include vs. extend, inheritance vs. composition, reflection, metaprogramming
+- Exercise: We will model Animals and Dogs, even ThreeLeggedDogs.
 - Time: 3 hours
 
 ### Instructions:
 - Download the files in 0_object_oriented_ruby
 - Open that folder in your terminal
 - Type "irb" in terminal
-- When in console, type load 'load.rb'
+- When in console, type require './lesson_0'
 
 #### Great Resources we referenced that might give you more practice:
 - [Classes vs. Modules](http://learnrubythehardway.org/book/ex40.html)
