@@ -28,10 +28,9 @@ module Population
       extend ClassMethods
 
       # `prepend` is like extend but places the module at the top
-      # of the inheritance hierarchy. This is useful to use because
-      # we can pass on all arguments to `initialize` and don't have
-      # to worry about whether or not the classes themselves
-      # pass on arguments
+      # of the inheritance hierarchy.
+      # We must use prepend or else the classes themselves may
+      # define `initialize` and our method will never get called
       prepend Initializer
     end
   end
