@@ -20,8 +20,7 @@ class Dog < Animal
   # You are effectively creating an 'instance' of the Dog Class.
   def initialize(name, age)
     @name = name
-    @age = age
-    super()
+    super(age)
   end
 
   # Try typing Dog.new.description.

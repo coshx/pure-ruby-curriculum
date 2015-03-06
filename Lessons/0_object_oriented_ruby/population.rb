@@ -26,14 +26,28 @@ module Population
       # This goes along with the common Ruby pattern mentioned
       # above
       extend ClassMethods
-      include Initializer
+
+      # `prepend` is like extend but places the module at the top
+      # of the inheritance hierarchy. This is useful to use because
+      # we can pass on all arguments to `initialize` and don't have
+      # to worry about whether or not the classes themselves
+      # pass on arguments
+      prepend Initializer
     end
   end
 
   module Initializer
     # Override `initialize` in order to track
     # the populations of our classes
-    def initialize(*args)
+    # Take arbitrary arguments in order to stay compatible with
+    # arbitary inheritance chains
+    def initialize(*a, &b)
+      # We must call `super` in case `initialized` has been defined
+      # upward in the hierarchy
+      # We call it first because we don't want to track the population
+      # if super fails
+      super
+
       # We don't just want to record a new instance of our own
       # class, but also our ancestor classes where we are
       # tracking population
@@ -49,10 +63,6 @@ module Population
           klass.send(:record_new_instance)
         end
       end
-
-      # We must call `super` in case `initialized` has been defined
-      # upward in the hierarchy
-      super
     end
   end
 
