@@ -14,8 +14,8 @@ class Histogram
     File.open(file,"r") do |f|
       f.each_line do |line|
         line_histogram = parse_string(line.downcase)
-        output.merge!(line_histogram) do |key, oldval, newval|
-          oldval + newval
+        output.merge!(line_histogram) do |key, old_val, new_val|
+          old_val + new_val
         end
       end
     end
