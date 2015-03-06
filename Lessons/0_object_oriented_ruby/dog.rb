@@ -1,12 +1,14 @@
 # Below you'll see an example of inheritance.
 # Class Dog inherits from Class Animal.
-# Try loading files and typing Dog.new.is_multicellular?
+# Try loading files and typing
+# > Dog.new("Stewie", 5).is_multicellular?
 # What do you now know about inheritance?
 class Dog < Animal
 
-  # Try typing Dog.is_multicellular?
+  # Try typing `Dog.new("Stewie", 5).is_multicellular?`
   # Do you get a result?
-  # Why do you get a result even though we haven't defined is_multicellular in the Dog class?
+  # Why do you get a result even though we haven't defined
+  # `#is_multicellular?` in the Dog class?
 
   # Below you'll see an example of composition.
   # Class Dog uses all methods available in a Module called "Quadruped"
@@ -29,7 +31,7 @@ class Dog < Animal
     super + "\nA usually furry, carnivorous member of the canidae family."
   end
 
-  # Try typing "Dog.new.owner_says"
+  # Try typing "Dog.owner_says"
   # Why doesn't it work?
   # Try calling owner_says on your instance of Dog (Buck)
   # Why do you get a different result?
@@ -38,7 +40,7 @@ class Dog < Animal
   end
 
   # How is the speak method different from the owner_says method?
-  def speak
+  def self.speak
     # This is how you access variables in Modules
     puts ["Woof", "Squeakkk", "Yawwwn", "Pant"].sample
   end
