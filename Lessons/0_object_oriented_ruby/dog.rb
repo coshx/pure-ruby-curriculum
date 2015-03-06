@@ -11,6 +11,7 @@ class Dog < Animal
   # Below you'll see an example of composition.
   # Class Dog uses all methods available in a Module called "Quadruped"
   include Quadruped
+  include Population
 
   # What might attr_accessor do?
   attr_accessor :name, :age
@@ -20,6 +21,7 @@ class Dog < Animal
   def initialize(name, age)
     @name = name
     @age = age
+    super()
   end
 
   # Try typing Dog.new.description.

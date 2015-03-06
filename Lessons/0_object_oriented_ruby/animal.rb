@@ -1,4 +1,5 @@
 class Animal
+  include Population
 
   def description
     "A multicellular, eukaryotic organism of the kingdom Animalia."
