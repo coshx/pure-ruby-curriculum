@@ -116,7 +116,7 @@ end
 # => 2
 # > ThreeLeggedDog.population
 # => 1
-# > Animal.new
+# > Animal.new(1337)
 # => #<Animal:0x000000013d2268>
 # > Animal.population
 # => 3
