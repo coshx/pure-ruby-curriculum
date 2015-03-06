@@ -1,5 +1,5 @@
 # Ruby Training
-###C urriculum Outline
+### Curriculum Outline
 
 Gabe Kopley, Instructor
 
