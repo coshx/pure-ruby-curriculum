@@ -3,9 +3,9 @@ class Histogram
   def self.parse_string(input)
     Hash[
       input.downcase.chars
-      .sort_by{ |n| n }
-      .group_by(&:chr)
-      .map{ |k, v| [k, v.length] }
+        .sort
+        .group_by(&:chr)
+        .map { |k, v| [k, v.length] }
     ]
   end
 
