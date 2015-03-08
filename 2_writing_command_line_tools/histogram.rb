@@ -1,8 +1,8 @@
 require 'slop'
 # NOTE: It seems the pry gem is incompatible with the latest version of Slop
-# So this might be why you see errors if ou 
+# So this might be why you see errors if you also require the pry gem
 
-# Our parse_string method from earlier
+# Our Histogram class from earlier
 # We add a "lines" parameter that includes "\n" if user doesn't request
 # that "\n"s be included
 class Histogram
