@@ -21,14 +21,16 @@ class Histogram
   end
 
   def self.parse_file(file, lines)
+    histogram = {}
     File.open(file, "r") do |f|
-      f.each_line.reduce({}) do |acc, line|
+      f.each_line.reduce(histogram) do |acc, line|
         line_histogram = parse_string(line.downcase, lines)
-        acc.merge(line_histogram) do |key, old_val, new_val|
+        acc.merge!(line_histogram) do |key, old_val, new_val|
           old_val + new_val
         end
       end
     end
+    print histogram
   end
 
 end
@@ -58,27 +60,32 @@ ARGV.each_with_index do |a , i|
   end
 end
 
-print "File parsed into Histogram: \n"
+print "File parsed into Histogram using Histogram class: \n"
 
-# ATTN Gabe: How to print the result wihout messing up the loop??
-# Right now if I had print acc at the end, it breaks the loop
-# as the loop depends on the result each time.
-# It works fine in irb, but I need to explicitly print the result
-# when a program is run like so: $ruby histogram.rb text.txt
-# So right now, this whole thign doesn't print the result :(
+# ATTN Gabe: For some reason, we have to have a merge! instead of a merge
+# to get the right result here.
+# What is the reason why that is necessary here but was not in the
+# previous lesson?
 
-# Also, is doing the below and using ARGF better than running the old 
-# prase_file function using ARGV like so: Histogram.parse_file(ARGV)
-# (since it seems like ARGF only has the each_line function and doesn't
-# just pass the filename...), what do you think? See below
+# We can get the result of parse_file in two ways
+# Either using ARGV and our Histogram class funcion OR
+# Using ARGF and copying over our function (to show how to use ARGF)
 
+# I agumented the Histogram class's parse_file method by pasing a variable
+# outside the block into the block so that I can print it
 Histogram.parse_file( ARGV[0].to_s, opts[:lines])
 
-ARGF.each_line.reduce({}) do |acc, line|
+print "\n File parsed into Histogram using ARGF: \n"
+
+histogram = {}
+
+ARGF.each_line do |line|
   # For debugging
   # print "acc = #{acc} and line = #{line}"
-  line_histogram = Histogram.parse_string(line.downcase, opts[:lines])
-  acc.merge(line_histogram) do |key, old_val, new_val|
-    old_val + new_val
+  line_histogram = Histogram.parse_string(line.downcase, false)
+  histogram.merge!(line_histogram) do |key, old_val, new_val|
+    old_val+new_val
   end
 end
+
+print histogram

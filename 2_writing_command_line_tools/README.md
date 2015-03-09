@@ -6,4 +6,7 @@
 * Time: 3 hours
 
 #### Instructions
+* 
 
+#### Great Resources we referenced
+* [Slop Gem](https://github.com/leejarvis/slop)
