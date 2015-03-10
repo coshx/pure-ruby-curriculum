@@ -21,9 +21,8 @@ class Histogram
   end
 
   def self.parse_file(file, lines)
-    histogram = {}
-    File.open(file, "r") do |f|
-      f.each_line.reduce(histogram) do |acc, line|
+    histogram = File.open(file, "r") do |f|
+      f.each_line.reduce({}) do |acc, line|
         line_histogram = parse_string(line.downcase, lines)
         acc.merge!(line_histogram) do |key, old_val, new_val|
           old_val + new_val
