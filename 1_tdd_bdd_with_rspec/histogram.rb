@@ -19,5 +19,4 @@ class Histogram
       end
     end
   end
-  
 end
