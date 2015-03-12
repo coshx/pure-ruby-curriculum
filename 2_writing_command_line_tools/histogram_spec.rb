@@ -1,7 +1,6 @@
 $:.unshift(__dir__)
 
 require "histogram"
-require "pry"
 
 RSpec.describe Histogram do
   context ".parse_string" do
