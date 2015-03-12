@@ -40,14 +40,16 @@ ids =
 full_lessons = ids.map { |id|
   response = OpenURI.open_uri("#{PROTOCOL}://#{HOST}/l/#{id}.json").read
   JSON.parse(response)
-  # Right here!
+  # Right here, you might dump the lesson to yaml
+  # right away, and then the hash corresponding to it
+  # can be garbage collected, instead of holding onto
+  # all the full_lessons in an array
 }
-
-# TODO normalize students and lessons,
-# then dump them to YAML files
 
 student_ids_written = {}
 
+# someone asked about a more beautiful API for open
+# and closing multiple files around a single block
 # just for example, we're not using this
 def File.gabes_open(filenames, permissionses)
   open_files = filenames.each_with_index.reduce([]) do |acc, (filename, i)|
@@ -102,15 +104,16 @@ students = File.open("students.yml") do |file|
   end
 end
 
-File.open("lessons.yml") do |file|
+lessons = File.open("lessons.yml") do |file|
   YAML.load_documents(file) do |record|
     record["students"] = record["students"].map { |id|
       students[id]
     }
-    write_record_to_db(record)
+    # Do something with each record, for example:
+    # write_record_to_db(record)
   end
   # lessons from yaml may be garbage collected
   # between iteration
 end
 
-#puts lessons[0]
+puts lessons[0]
