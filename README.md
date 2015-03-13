@@ -54,10 +54,10 @@ Gabe Kopley, Instructor
 
 ##### Lesson 6: A Peek at Meta-Programming
 
-Goal: Inspire students with the possibilities of Ruby's powerful meta-programming facilities.
-Topics: RSpec, object hooks, super
-Exercise: Implement a Population mixin that counts the number of instances of Animal and its subclasses
-Time: 2 hours
+* Goal: Inspire students with the possibilities of Ruby's powerful meta-programming facilities.
+* Topics: RSpec, object hooks, super
+* Exercise: Implement a Population mixin that counts the number of instances of Animal and its subclasses
+* Time: 2 hours
 
 ### Reference Texts
 
